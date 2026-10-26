@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskBoard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>TaskBoard</h1>
+    <p>Internal project task tracker</p>
+  </header>
+  <main>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul id="project-list"></ul>
+    </section>
+    <section id="tasks" style="display:none;">
+      <h2 id="project-title"></h2>
+      <button id="back-btn">Back to projects</button>
+      <ul id="task-list"></ul>
+    </section>
+    <section id="task-detail" style="display:none;">
+      <h2 id="detail-title"></h2>
+      <button id="detail-back-btn">Back to tasks</button>
+      <div>
+        <label>Status:</label>
+        <select id="status-select">
+          <option value="todo">To Do</option>
+          <option value="in_progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+      </div>
+      <div>
+        <label>Notes:</label>
+        <textarea id="notes-input" rows="4"></textarea>
+      </div>
+      <button id="save-btn">Save changes</button>
+      <p id="save-message"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
